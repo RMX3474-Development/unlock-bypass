@@ -9,7 +9,7 @@ with IMEI 1 (you can get them both from Settings/About Device/Status):
 ```
 perl deeptesting-junk.pl pcb 0xHHHHHHHH imei DDDDDDDDDDDDDDD cmd applyLkUnlock
 ```
-**Keep the `0x` before the serial number, it's not a typo!**
+**Keep the `0x` at the start of the serial number, it's not a typo!**
 
 Also notice that --despite the `pcb` name-- it really is the serial number, not the
 pcb number from the engineermode app!
