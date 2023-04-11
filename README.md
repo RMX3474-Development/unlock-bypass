@@ -1,4 +1,4 @@
-### [deeptesting-junk.pl](deeptesting-junk.pl)
+## [deeptesting-junk.pl](deeptesting-junk.pl)
 
 If you tried to use Realme's "deep testing" apk from [here](https://c.realme.com/in/post-details/1591008567903752192)
 and got that nasty "This phone model does not support deep testing." screen,
@@ -39,8 +39,13 @@ Android 12 EEA/GDPR variant of the firmware.
 
 The `deeptesting-junk.pl` script does nothing else than simulate the https requests
 performed by the deeptesting app to their `lkf.realmemobile.com` server; it does not
-save or send any data anywhere else. On a debian-like linux system, use
-`apt-get install libwww-perl libcrypt-rijndael-perl` to install the required modules.
+save or send any data anywhere else.
+
+On a debian-like linux system, use `apt-get install libwww-perl libcrypt-rijndael-perl`
+to install the modules required by this script.
+
+On windows, the [Strawberry Perl](https://strawberryperl.com/) distribution includes
+those modules by default.
 
 [^1]: The app is getting that value from the [`/proc/oplusVersion/serialID`][serial_id] file.
 If you instead try with something that looks like a pcb number, they place your request in
