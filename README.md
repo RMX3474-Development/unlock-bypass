@@ -35,7 +35,7 @@ perl deeptesting-junk.pl pcb 0xHHHHHHHH imei DDDDDDDDDDDDDDD cmd checkApproveRes
 ```
 
 This worked for me, at some point in February 2023, on a Realme 9 5G RMX3474, the
-Android 12 EEA/GDPR variant of the firmware.
+Android 12 GDPR variant of the firmware.
 
 The `deeptesting-junk.pl` script does nothing else than simulate the https requests
 performed by the deeptesting app to their `lkf.realmemobile.com` server; it does not
@@ -45,7 +45,8 @@ On a debian-like linux system, use `apt-get install libwww-perl libcrypt-rijndae
 to install the modules required by this script.
 
 On windows, the [Strawberry Perl](https://strawberryperl.com/) distribution includes
-those modules by default.
+those modules by default; to prevent the windows console from mangling the output, set
+its code page to utf-8 with `chcp 65001` before running the script.
 
 [^1]: The app is getting that value from the [`/proc/oplusVersion/serialID`][serial_id] file.
 If you instead try with something that looks like a pcb number, they place your request in
